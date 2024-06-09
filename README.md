@@ -13,3 +13,6 @@ Follows [this guide](https://realmdex.com/index.php?threads/how-to-setup-your-ne
 > If you get an error regarding flash player, you'll need to find the project configuration 
 
 > If you get an error for the `LegendsList..` file, right click and Jump To Source, then hover over the faulty code (red underline), click see options, and select the option named something like "cast type".
+
+### Other resources
+https://github.com/Devwarlt/LoE-Realm-NC-2/blob/production/HowToSetup.md
