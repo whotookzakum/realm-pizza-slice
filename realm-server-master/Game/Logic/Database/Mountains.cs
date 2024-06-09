@@ -9,6 +9,16 @@ namespace RotMG.Game.Logic.Database
     {
         public void Init(BehaviorDb db)
         {
+            db.Init("Oryx the Mad God 2", 
+                new IfConditionEffect(ConditionEffectIndex.Slowed, 
+                    new Shoot(32, 16)),
+                new Prioritize(
+                    new Shoot(7, 1, cooldown: 5000),
+                    new Shoot(19, 8, cooldown: 1000, rotateAngle: 30, angleOffset: 6)
+                ), 
+                new Grenade(radius: 2, damage: 20, cooldown: 1500, color: 0xffFFFF00, effect: ConditionEffectIndex.Paralyzed, effectDuration: 1000),
+                new ItemLoot("Admin Staff", 1, .1f));
+
             db.Init("Medusa", 
                 new IfConditionEffect(ConditionEffectIndex.Slowed, 
                     new Shoot(32, 16)),

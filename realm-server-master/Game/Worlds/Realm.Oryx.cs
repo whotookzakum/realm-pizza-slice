@@ -424,7 +424,7 @@ namespace RotMG.Game.Worlds
                     Tuple.Create("Pirate", 0.3),
                     Tuple.Create("Piratess", 0.1),
                     Tuple.Create("Snake", 0.2),
-                    Tuple.Create("Scorpion Queen", 0.4),
+                    Tuple.Create("Scorpion Queen", 2.0),
                 })
             },
             { Terrain.ShorePlains, Tuple.Create(
@@ -530,6 +530,7 @@ namespace RotMG.Game.Worlds
             { Terrain.Mountains, Tuple.Create(
                 100, new []
                 {
+                    Tuple.Create("Oryx the Mad God 2", 0.9),
                     Tuple.Create("White Demon", 0.1),
                     Tuple.Create("Sprite God", 0.11),
                     Tuple.Create("Medusa", 0.1),

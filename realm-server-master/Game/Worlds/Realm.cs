@@ -13,7 +13,7 @@ namespace RotMG.Game.Worlds
             "Wyrm", "Hydra", "Leviathan", "Minotaur", "Mummy", "Reaper", "Phoenix", "Giant", "Unicorn", "Harpy",
             "Gargoyle", "Snake", "Cube", "Goblin", "Hobbit", "Skeleton", "Scorpion", "Bat", "Ghost", "Slime", "Lich",
             "Orc", "Imp", "Spider", "Demon", "Blob", "Golem", "Sprite", "Flayer", "Ogre", "Djinn", "Cyclops",
-            "Beholder", "Medusa"
+            "Beholder", "Medusa", "Oryx the Mad God 2"
         });
 
         public new readonly WMap Map;

@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"output": "bin-debug/WebMain.swf",
+		"warnings": false,
+		"source-path": [
+			"src"
+		],
+		"library-path": [
+			"libs"
+		]
+	},
+	"files": [
+		"src/WebMain.as"
+	],
+	"additionalOptions": "-locale en_US\r\n-default-size 800 600\r\n-default-frame-rate 60\r\n-default-background-color #000000\r\n-swf-version 15\r\n-dump-config config.xml\r\n-optimize=true\r\n-use-direct-blit=true\r\n-keep-as3-metadata+=Inject\r\n-keep-as3-metadata+=Embed\r\n-keep-as3-metadata+=PostConstruct\r\n-keep-as3-metadata+=ArrayElementType"
+}

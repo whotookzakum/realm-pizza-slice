@@ -1633,7 +1633,7 @@
     <Object type="0xa1a" id="Shortbow">
         <Class>Equipment</Class>
         <Item/>
-        <Texture><File>lofiObj5</File><Index>0x50</Index></Texture>
+        <Texture><File>lofiObj2</File><Index>0x04</Index></Texture>
         <SlotType>3</SlotType>
         <Tier>0</Tier>
         <Description>A well-made shortbow.</Description>
@@ -1642,8 +1642,8 @@
         <Projectile>
             <ObjectId>Green Arrow</ObjectId>
             <Speed>160</Speed>
-            <MinDamage>10</MinDamage>
-            <MaxDamage>40</MaxDamage>
+            <MinDamage>800</MinDamage>
+            <MaxDamage>900</MaxDamage>
             <LifetimeMS>440</LifetimeMS>
             <MultiHit/>
         </Projectile>

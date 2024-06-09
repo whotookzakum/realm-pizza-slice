@@ -114,7 +114,8 @@ namespace RotMG.Game.Entities
                 return;
             }
 
-            var item = Inventory[slot];
+            int item = Inventory[slot];
+            int data = ItemDatas[slot];
             if (item == -1)
             {
 #if DEBUG
@@ -124,10 +125,12 @@ namespace RotMG.Game.Entities
             }
 
             Inventory[slot] = -1;
+            ItemDatas[slot] = -1;
             UpdateInventorySlot(slot);
 
             var container = new Container(Container.PurpleBag, AccountId, 120000);
             container.Inventory[0] = item;
+            container.ItemDatas[0] = data;
             container.UpdateInventorySlot(0);
 
             RecalculateEquipBonuses();
@@ -141,7 +144,7 @@ namespace RotMG.Game.Entities
 
             (en1 as IContainer)?.UpdateInventorySlot(slot1.SlotId);
             (en2 as IContainer)?.UpdateInventorySlot(slot2.SlotId);
-            
+
             //Undefined entities
             if (en1 == null || en2 == null)
             {
@@ -151,7 +154,7 @@ namespace RotMG.Game.Entities
                 Client.Send(InvalidInvSwap);
                 return;
             }
-            
+
             //Entities which are not containers???
             if (!(en1 is IContainer) || !(en2 is IContainer))
             {
@@ -202,11 +205,11 @@ namespace RotMG.Game.Entities
             }
 
             //Container manipulation attempt
-            if (en1 is Container && 
-                (en1 as Container).OwnerId != -1 && 
+            if (en1 is Container &&
+                (en1 as Container).OwnerId != -1 &&
                 AccountId != (en1 as Container).OwnerId ||
-             en2 is Container && 
-             (en2 as Container).OwnerId != -1 && 
+             en2 is Container &&
+             (en2 as Container).OwnerId != -1 &&
              AccountId != (en2 as Container).OwnerId)
             {
 #if DEBUG
@@ -230,8 +233,10 @@ namespace RotMG.Game.Entities
             }
 
             //Invalid slot types
-            var item1 = con1.Inventory[slot1.SlotId];
-            var item2 = con2.Inventory[slot2.SlotId];
+            int item1 = con1.Inventory[slot1.SlotId];
+            int data1 = con1.ItemDatas[slot1.SlotId];
+            int item2 = con2.Inventory[slot2.SlotId];
+            int data2 = con2.ItemDatas[slot2.SlotId];
             var d = Desc as PlayerDesc;
             ItemDesc d1;
             ItemDesc d2;
@@ -291,7 +296,9 @@ namespace RotMG.Game.Entities
                 Database.RemoveGift(Client.Account, item1);
 
             con1.Inventory[slot1.SlotId] = item2;
+            con1.ItemDatas[slot1.SlotId] = data2;
             con2.Inventory[slot2.SlotId] = item1;
+            con2.ItemDatas[slot2.SlotId] = data1;
             con1.UpdateInventorySlot(slot1.SlotId);
             con2.UpdateInventorySlot(slot2.SlotId);
             RecalculateEquipBonuses();
@@ -323,83 +330,83 @@ namespace RotMG.Game.Entities
 #endif
             switch (slot)
             {
-                case 0: 
+                case 0:
                     SetSV(StatType.Inventory0, Inventory[0]);
                     SetPrivateSV(StatType.ItemData0, ItemDatas[0]);
                     break;
-                case 1: 
+                case 1:
                     SetSV(StatType.Inventory1, Inventory[1]);
                     SetPrivateSV(StatType.ItemData1, ItemDatas[1]);
                     break;
-                case 2: 
+                case 2:
                     SetSV(StatType.Inventory2, Inventory[2]);
                     SetPrivateSV(StatType.ItemData2, ItemDatas[2]);
                     break;
-                case 3: 
+                case 3:
                     SetSV(StatType.Inventory3, Inventory[3]);
                     SetPrivateSV(StatType.ItemData3, ItemDatas[3]);
                     break;
-                case 4: 
+                case 4:
                     SetPrivateSV(StatType.Inventory4, Inventory[4]);
                     SetPrivateSV(StatType.ItemData4, ItemDatas[4]);
                     break;
-                case 5: 
+                case 5:
                     SetPrivateSV(StatType.Inventory5, Inventory[5]);
                     SetPrivateSV(StatType.ItemData5, ItemDatas[5]);
                     break;
-                case 6: 
+                case 6:
                     SetPrivateSV(StatType.Inventory6, Inventory[6]);
                     SetPrivateSV(StatType.ItemData6, ItemDatas[6]);
                     break;
-                case 7: 
+                case 7:
                     SetPrivateSV(StatType.Inventory7, Inventory[7]);
                     SetPrivateSV(StatType.ItemData7, ItemDatas[7]);
                     break;
-                case 8: 
+                case 8:
                     SetPrivateSV(StatType.Inventory8, Inventory[8]);
                     SetPrivateSV(StatType.ItemData8, ItemDatas[8]);
                     break;
-                case 9: 
+                case 9:
                     SetPrivateSV(StatType.Inventory9, Inventory[9]);
                     SetPrivateSV(StatType.ItemData9, ItemDatas[9]);
                     break;
-                case 10: 
+                case 10:
                     SetPrivateSV(StatType.Inventory10, Inventory[10]);
                     SetPrivateSV(StatType.ItemData10, ItemDatas[10]);
                     break;
-                case 11: 
+                case 11:
                     SetPrivateSV(StatType.Inventory11, Inventory[11]);
                     SetPrivateSV(StatType.ItemData11, ItemDatas[11]);
                     break;
-                case 12: 
+                case 12:
                     SetPrivateSV(StatType.Backpack0, Inventory[12]);
                     SetPrivateSV(StatType.ItemData12, ItemDatas[12]);
                     break;
-                case 13: 
+                case 13:
                     SetPrivateSV(StatType.Backpack1, Inventory[13]);
                     SetPrivateSV(StatType.ItemData13, ItemDatas[13]);
                     break;
-                case 14: 
+                case 14:
                     SetPrivateSV(StatType.Backpack2, Inventory[14]);
                     SetPrivateSV(StatType.ItemData14, ItemDatas[14]);
                     break;
-                case 15: 
+                case 15:
                     SetPrivateSV(StatType.Backpack3, Inventory[15]);
                     SetPrivateSV(StatType.ItemData15, ItemDatas[15]);
                     break;
-                case 16: 
+                case 16:
                     SetPrivateSV(StatType.Backpack4, Inventory[16]);
                     SetPrivateSV(StatType.ItemData16, ItemDatas[16]);
                     break;
-                case 17: 
+                case 17:
                     SetPrivateSV(StatType.Backpack5, Inventory[17]);
                     SetPrivateSV(StatType.ItemData17, ItemDatas[17]);
                     break;
-                case 18: 
+                case 18:
                     SetPrivateSV(StatType.Backpack6, Inventory[18]);
                     SetPrivateSV(StatType.ItemData18, ItemDatas[18]);
                     break;
-                case 19: 
+                case 19:
                     SetPrivateSV(StatType.Backpack7, Inventory[19]);
                     SetPrivateSV(StatType.ItemData19, ItemDatas[19]);
                     break;

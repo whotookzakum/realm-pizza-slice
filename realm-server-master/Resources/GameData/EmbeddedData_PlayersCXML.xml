@@ -36,13 +36,13 @@
 		<Player/>
 		<BloodProb>1.0</BloodProb>
 		<SlotTypes>3, 15, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-		<Equipment>0xa1a, 0xa61, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-		<MaxHitPoints max="700">130</MaxHitPoints>
+		<Equipment>0xa1a, 0xa61, -1, 0xaca, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
+		<MaxHitPoints max="700">700</MaxHitPoints>
 		<MaxMagicPoints max="252">100</MaxMagicPoints>
 		<Attack max="75">12</Attack>
 		<Defense max="25">0</Defense>
-		<Speed max="50">12</Speed>
-		<Dexterity max="50">12</Dexterity>
+		<Speed max="100">100</Speed>
+		<Dexterity max="100">100</Dexterity>
 		<HpRegen max="40">12</HpRegen>
 		<MpRegen max="50">10</MpRegen>
 		<LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>

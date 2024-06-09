@@ -6,7 +6,7 @@ package com.company.assembleegameclient.ui.panels.itemgrids
    import com.company.util.ArrayIterator;
    import com.company.util.IIterator;
    import kabam.lib.util.VectorAS3Util;
-   
+
    public class EquippedGrid extends ItemGrid
    {
        

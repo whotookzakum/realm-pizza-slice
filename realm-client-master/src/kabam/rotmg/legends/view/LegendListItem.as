@@ -106,7 +106,7 @@ package kabam.rotmg.legends.view
             interactiveItemTileIterator = InteractiveItemTile(iterator.next());
             interactiveItemTileIterator.setInteractive(false);
          }
-         this.inventoryGrid.setItems(this.legend.equipment, this.legend.itemDatas, new Vector.<uint>(this.legend.equipment.length));
+         this.inventoryGrid.setItems(this.legend.equipment, this.legend.itemDatas, int(new Vector.<uint>(this.legend.equipment.length)));
          this.inventoryGrid.x = 400;
          this.inventoryGrid.y = HEIGHT / 2 - Slot.HEIGHT / 2;
          addChild(this.inventoryGrid);

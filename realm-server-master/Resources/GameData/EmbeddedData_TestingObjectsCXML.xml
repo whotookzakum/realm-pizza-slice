@@ -8,8 +8,8 @@
 		<Enemy/>
 		<Class>Character</Class>
 		<Texture><File>lofiChar16x16</File><Index>0x54</Index></Texture>
-		<HitSound>monster/oryx_hit</HitSound>
-		<DeathSound>monster/oryx_death</DeathSound>
+		<HitSound>monster/scorpions_hit</HitSound>
+		<DeathSound>quack</DeathSound>
 		<Size>120</Size>
 		<MaxHitPoints>75000</MaxHitPoints>
 		<Defense>60</Defense>

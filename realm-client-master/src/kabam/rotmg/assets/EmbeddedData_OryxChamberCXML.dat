@@ -7,8 +7,8 @@
 		
 		<AnimatedTexture><File>chars16x16dEncounters2</File><Index>37</Index></AnimatedTexture>
 
-		<HitSound>monster/oryx_hit</HitSound>
-		<DeathSound>monster/oryx_death</DeathSound>
+		<HitSound>monster/scorpions_hit</HitSound>
+		<DeathSound>quack</DeathSound>
 		<Quest/>
 		<God/>
 		<Oryx/>
