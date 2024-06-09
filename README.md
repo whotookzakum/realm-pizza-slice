@@ -17,3 +17,4 @@ Follows [this guide](https://realmdex.com/index.php?threads/how-to-setup-your-ne
 ### Other resources
 https://github.com/Devwarlt/LoE-Realm-NC-2/blob/production/HowToSetup.md
 https://realmdex.com/index.php?threads/skill-level-easy-adding-items-to-your-private-server.176/
+https://github.com/Knockoff098/The-Client-Master
